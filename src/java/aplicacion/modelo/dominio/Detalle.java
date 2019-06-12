@@ -11,10 +11,12 @@ package aplicacion.modelo.dominio;
  * @author Jose
  */
 public class Detalle {
+    
     private Integer codigoDetalle;
     private Integer cantidad;
     private Producto Producto;
     private double precio;
+    private Factura factura;
 
     public Detalle() {
     }

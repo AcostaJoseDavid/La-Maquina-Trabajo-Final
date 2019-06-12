@@ -10,6 +10,7 @@ package aplicacion.modelo.dominio;
  * @author Jose
  */
 public class Usuario {
+    private boolean estadoUsuario;
     private Integer legajo;
     private String nombreUsuario;
     private String apellidoUsuario;
@@ -19,15 +20,14 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(Integer legajo, String nombreUsuario, String apellidoUsuario, String contraseñaUsuario, String tipoUsuario) {
+    public Usuario(boolean estadoUsuario, Integer legajo, String nombreUsuario, String apellidoUsuario, String contraseñaUsuario, String tipoUsuario) {
+        this.estadoUsuario = estadoUsuario;
         this.legajo = legajo;
         this.nombreUsuario = nombreUsuario;
         this.apellidoUsuario = apellidoUsuario;
         this.contraseñaUsuario = contraseñaUsuario;
         this.tipoUsuario = tipoUsuario;
     }
-    
-
     /**
      * @return the legajo
      */
@@ -97,5 +97,20 @@ public class Usuario {
     public void setTipoUsuario(String tipoUsuario) {
         this.tipoUsuario = tipoUsuario;
     }
+
+    /**
+     * @return the estadoUsuario
+     */
+    public boolean isEstadoUsuario() {
+        return estadoUsuario;
+    }
+
+    /**
+     * @param estadoUsuario the estadoUsuario to set
+     */
+    public void setEstadoUsuario(boolean estadoUsuario) {
+        this.estadoUsuario = estadoUsuario;
+    }
+    
     
 }

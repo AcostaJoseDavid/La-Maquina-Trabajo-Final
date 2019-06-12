@@ -10,6 +10,7 @@ package aplicacion.modelo.dominio;
  * @author Jose
  */
 public class Producto {
+    private boolean estadoProducto;
     private Integer codigoProducto;
     private String nombreProducto;
     private Integer stock;
@@ -18,7 +19,8 @@ public class Producto {
     public Producto() {
     }
 
-    public Producto(Integer codigoProducto, String nombreProducto, Integer stock, double precioProducto) {
+    public Producto(boolean estadoProducto, Integer codigoProducto, String nombreProducto, Integer stock, double precioProducto) {
+        this.estadoProducto = estadoProducto;
         this.codigoProducto = codigoProducto;
         this.nombreProducto = nombreProducto;
         this.stock = stock;
@@ -80,5 +82,20 @@ public class Producto {
     public void setPrecioProducto(double precioProducto) {
         this.precioProducto = precioProducto;
     }
+
+    /**
+     * @return the estadoProducto
+     */
+    public boolean isEstadoProducto() {
+        return estadoProducto;
+    }
+
+    /**
+     * @param estadoProducto the estadoProducto to set
+     */
+    public void setEstadoProducto(boolean estadoProducto) {
+        this.estadoProducto = estadoProducto;
+    }
+    
     
 }
