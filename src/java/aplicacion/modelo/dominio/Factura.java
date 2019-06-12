@@ -5,10 +5,18 @@
  */
 package aplicacion.modelo.dominio;
 
+import java.util.Date;
+import java.util.Set;
+
 /**
  *
  * @author Jose
  */
 public class Factura {
-    
+    private Date fechaFactura;
+    private Usuario usuario;
+    private Usuario vendedor;
+    private Set<Detalle> detalles;
+    private String formaPago;
+    private double total;
 }

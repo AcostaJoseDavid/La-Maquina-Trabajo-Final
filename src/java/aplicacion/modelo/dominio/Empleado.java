@@ -7,11 +7,8 @@ package aplicacion.modelo.dominio;
 
 /**
  *
- * @author Jose
+ * @author Diego
  */
-public class Producto {
-    private String codigoProducto;
-    private String nombreProducto;
-    private Integer stock;
-    private double precioProducto;
+public class Empleado extends Usuario{
+    private Integer legajo;
 }

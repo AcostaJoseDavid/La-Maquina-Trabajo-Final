@@ -10,5 +10,8 @@ package aplicacion.modelo.dominio;
  * @author Jose
  */
 public class Usuario {
-    
+    private String nombreUsuario;
+    private String apellidoUsuario;
+    private String contraseñaUsuario;
+    private String tipoUsuario;
 }
