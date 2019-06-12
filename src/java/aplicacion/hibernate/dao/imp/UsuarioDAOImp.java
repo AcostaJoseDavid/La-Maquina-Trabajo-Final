@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package aplicacion.modelo.dominio;
+package aplicacion.hibernate.dao.imp;
 
 /**
  *
  * @author Diego
  */
-public class Empleado extends Usuario{
-    private Integer legajo;
+public class UsuarioDAOImp {
+    
 }
