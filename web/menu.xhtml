@@ -1,14 +1,50 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
 
     <body>
 
         <ui:composition template="./META-INF/templates/principalTemplate.xhtml">
 
             <ui:define name="content">
-                content
+                <h:form id="opcionesMenu">            
+                    <h:panelGrid columns="2" style="text-align: center">
+                        <p:commandLink id="admin" onclick="PF('loginAdmin').show();">
+                            <h:graphicImage library="images" name="administrador.png"/>
+                            <h2 style="text-align: center">Adminstrador</h2>
+                        </p:commandLink>
+
+                        <p:commandLink id="empleado" onclick="PF('loginEmpleado').show();">
+                            <h:graphicImage library="images" name="empleado.png"/>
+                            <h2 style="text-align: center">Empleado</h2>
+                        </p:commandLink>
+
+                        <p:commandLink id="usuario" onclick="PF('loginUser').show();">
+                            <h:graphicImage library="images" name="registrado.png"/>
+                            <h2 style="text-align: center">Usuario Registrado</h2>
+                        </p:commandLink>
+
+                        <p:commandLink id="nuevoUsuario" onclick="PF('registerUser').show();">
+                            <h:graphicImage library="images" name="registrarse.png"/>
+                            <h2 style="text-align: center">Nuevo Usuario</h2>
+                        </p:commandLink>
+                        <p:dialog header="Login de Administrador" widgetVar="loginAdmin" modal="true" height="100">
+                            <h:outputText value="This is a Modal Dialog." />
+                        </p:dialog>
+                        <p:dialog header="Login de Empleado" widgetVar="loginEmpleado" modal="true" height="100">
+                            <h:outputText value="This is a Modal Dialog." />
+                        </p:dialog>
+                        <p:dialog header="Login de Usuario" widgetVar="loginUser" modal="true" height="100">
+                            <h:outputText value="This is a Modal Dialog." />
+                        </p:dialog>
+                        <p:dialog header="Registrarse" widgetVar="registerUser" modal="true" height="100">
+                            <h:outputText value="This is a Modal Dialog." />
+                        </p:dialog>
+                    </h:panelGrid>
+                </h:form>
             </ui:define>
 
         </ui:composition>
