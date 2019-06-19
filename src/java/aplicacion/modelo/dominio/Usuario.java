@@ -10,12 +10,12 @@ package aplicacion.modelo.dominio;
  * @author Jose
  */
 public class Usuario {
-    private boolean estadoUsuario;
     private Integer legajo;
     private String nombreUsuario;
-    private String apellidoUsuario;
     private String contraseñaUsuario;
+    private String apellidoUsuario;
     private String tipoUsuario;
+    private boolean estadoUsuario;
 
     public Usuario() {
     }

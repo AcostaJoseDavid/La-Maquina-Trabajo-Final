@@ -10,11 +10,11 @@ package aplicacion.modelo.dominio;
  * @author Jose
  */
 public class Producto {
-    private boolean estadoProducto;
     private Integer codigoProducto;
     private String nombreProducto;
     private Integer stock;
     private double precioProducto;
+    private boolean estadoProducto;
 
     public Producto() {
     }

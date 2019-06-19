@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="aplicacion.modelo.Factura" catalog="trabajofinalmuebleria" table="facturas"
+           optimistic-lock="version">
+        <id name="codigoFactura" type="integer">
+            <column name="fac_codigo_factura" length="10"/>
+            <generator class="identity"/>
+        </id>
+        <property name="fechaFactura" type="date">
+            <column name="fac_fecha_factura" not-null="true"/>        
+        </property>
+        <many-to-one name="usuario" class="aplicacion.modelo.dominio.Usuario" fetch="join" cascade="all">
+            <column name="fac_usuario" not-null="true"/>
+        </many-to-one>
+        <property name="apellidoComprador" type="string">
+            <column name="fac_apellido_comprador" length="15" not-null="true"/>
+        </property>
+        <property name="nombreComprador" type="string">
+            <column name="fac_nombre_comprador" length="15" not-null="true"/>
+        </property>
+        <property name="dNIComprador" type="integer">
+            <column name="fac_dni_comprador" length="8" not-null="true"/>
+        </property>
+        <set name="detalles" table="fac_dat" fetch="join" cascade="all">
+            <key column=""/>
+            <many-to-many class="aplicacion.modelo.dominio.Detalle" column="det_codigoDetalle"/>
+        </set>
+        <property name="total" type="double">
+            <column name="fac_total" length="10" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="aplicacion.modelo.Producto" catalog="trabajofinalmuebleria" table="productos"
+           optimistic-lock="version">
+        <id name="codigoProducto" type="integer">
+            <column name="prod_codigo_producto" length="10"/>
+            <generator class="identity"/>
+        </id>      
+        <property name="nombreProducto" type="string">
+            <column name="prod_nombre_producto" length="15" not-null="true"/>        
+        </property>
+        <property name="stock" type="integer">
+            <column name="prod_stock" length="10" not-null="true"/>        
+        </property>
+        <property name="precioProducto" type="double">
+            <column name="prod_precio_producto" length="7" not-null="true"/>       
+        </property>
+        <property name="estadoProducto" type="boolean">
+            <column name="prod_estado_producto" not-null="true"/>       
+        </property>
+    </class>  
+</hibernate-mapping>

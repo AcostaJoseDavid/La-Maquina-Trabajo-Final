@@ -3,14 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package aplicacion.hibernate.dao;
-
-import aplicacion.modelo.dominio.Usuario;
+package aplicacion.modelo.constantes;
 
 /**
  *
- * @author Diego
+ * @author Jose
  */
-public interface IUsuarioDAO { //extends IGenericDAO<Object, Object>
-    void create(Usuario usuario);
+public class TipoUsuario {
+    public static final String ADMIN="ADMIN";
 }

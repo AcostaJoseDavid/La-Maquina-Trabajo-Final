@@ -16,23 +16,25 @@ public class Factura {
     private Integer codigoFactura;
     private Date fechaFactura;
     private Usuario vendedor;
-    private String comprador;
+    private String apellidoComprador;
+    private String nombreComprador;
+    private Integer dNIComprador;
     private Set<Detalle> detalles;
     private double total;
 
     public Factura() {
     }
 
-    public Factura(Integer codigoFactura, Date fechaFactura, Usuario vendedor, String comprador, Set<Detalle> detalles, double total) {
+    public Factura(Integer codigoFactura, Date fechaFactura, Usuario vendedor, String apellidoComprador, String nombreComprador, Integer dNIComprador, Set<Detalle> detalles, double total) {
         this.codigoFactura = codigoFactura;
         this.fechaFactura = fechaFactura;
         this.vendedor = vendedor;
-        this.comprador = comprador;
+        this.apellidoComprador = apellidoComprador;
+        this.nombreComprador = nombreComprador;
+        this.dNIComprador = dNIComprador;
         this.detalles = detalles;
         this.total = total;
     }
-    
-    
 
     /**
      * @return the codigoFactura
@@ -77,17 +79,45 @@ public class Factura {
     }
 
     /**
-     * @return the comprador
+     * @return the apellidoComprador
      */
-    public String getComprador() {
-        return comprador;
+    public String getApellidoComprador() {
+        return apellidoComprador;
     }
 
     /**
-     * @param comprador the comprador to set
+     * @param apellidoComprador the apellidoComprador to set
      */
-    public void setComprador(String comprador) {
-        this.comprador = comprador;
+    public void setApellidoComprador(String apellidoComprador) {
+        this.apellidoComprador = apellidoComprador;
+    }
+
+    /**
+     * @return the nombreComprador
+     */
+    public String getNombreComprador() {
+        return nombreComprador;
+    }
+
+    /**
+     * @param nombreComprador the nombreComprador to set
+     */
+    public void setNombreComprador(String nombreComprador) {
+        this.nombreComprador = nombreComprador;
+    }
+
+    /**
+     * @return the dNIComprador
+     */
+    public Integer getdNIComprador() {
+        return dNIComprador;
+    }
+
+    /**
+     * @param dNIComprador the dNIComprador to set
+     */
+    public void setdNIComprador(Integer dNIComprador) {
+        this.dNIComprador = dNIComprador;
     }
 
     /**
@@ -117,5 +147,6 @@ public class Factura {
     public void setTotal(double total) {
         this.total = total;
     }
+
     
 }

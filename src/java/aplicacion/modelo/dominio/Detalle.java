@@ -14,18 +14,19 @@ public class Detalle {
     
     private Integer codigoDetalle;
     private Integer cantidad;
-    private Producto Producto;
+    private Producto producto;
     private double precio;
     private Factura factura;
 
     public Detalle() {
     }
 
-    public Detalle(Integer codigoDetalle, Integer cantidad, Producto Producto, double precio) {
+    public Detalle(Integer codigoDetalle, Integer cantidad, Producto producto, double precio, Factura factura) {
         this.codigoDetalle = codigoDetalle;
         this.cantidad = cantidad;
-        this.Producto = Producto;
+        this.producto = producto;
         this.precio = precio;
+        this.factura = factura;
     }
 
     /**
@@ -57,17 +58,17 @@ public class Detalle {
     }
 
     /**
-     * @return the Producto
+     * @return the producto
      */
     public Producto getProducto() {
-        return Producto;
+        return producto;
     }
 
     /**
-     * @param Producto the Producto to set
+     * @param producto the producto to set
      */
-    public void setProducto(Producto Producto) {
-        this.Producto = Producto;
+    public void setProducto(Producto producto) {
+        this.producto = producto;
     }
 
     /**
@@ -83,5 +84,20 @@ public class Detalle {
     public void setPrecio(double precio) {
         this.precio = precio;
     }
+
+    /**
+     * @return the factura
+     */
+    public Factura getFactura() {
+        return factura;
+    }
+
+    /**
+     * @param factura the factura to set
+     */
+    public void setFactura(Factura factura) {
+        this.factura = factura;
+    }
+
     
 }
