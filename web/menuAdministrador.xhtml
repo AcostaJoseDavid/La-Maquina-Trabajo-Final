@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./META-INF/templates/principalTemplate.xhtml">
+
+            <ui:define name="content">
+                <form>
+                    <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+                        <h:outputLabel for="nombre" value="Nombre:" />
+                        <p:inputText id="nombre" value="" required="true" label="nombre" />
+                        <h:outputLabel for="apellido" value="Apellido: " />
+                        <p:inputText id="apellido" value="" required="true" label="apellido" />
+                        <h:outputLabel for="tipoUsuario" value="Tipo de Usuario:" />
+                        <p:selectOneMenu>
+                            <f:selectItem itemLabel="Empleado" itemValue="Empleado" />
+                            <f:selectItem itemLabel="Administrador" itemValue="Administrador" />
+                        </p:selectOneMenu>
+                        <h:outputLabel for="password" value="Contraseña:" />
+                        <p:inputNumber id="password" required="true"/>
+                        <p:commandButton value="Cancelar" icon="ui-icon-closethick" iconPos="right" type="button"/>
+                        <p:commandButton value="Guardar" icon="	ui-icon-check" iconPos="right" type="button"/>
+                    </h:panelGrid>
+                </form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
