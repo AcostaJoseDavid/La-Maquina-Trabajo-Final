@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:p="http://primefaces.org/ui"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
 
     <body>
 
@@ -21,28 +22,25 @@
                             <h:graphicImage library="images" name="empleado.png"/>
                             <h2 style="text-align: center">Empleado</h2>
                         </p:commandLink>
+                        <p:growl id="growl" sticky="true" showDetail="true" life="3000" />
+                        <p:dialog header="Login de Administrador" widgetVar="loginAdmin" modal="true" resizable="false">
+                            <h:panelGrid columns="2" cellpadding="5">
+                                <h:outputLabel for="username" value="Username:" />
+                                <p:inputText id="username" value="" required="true" label="username" />
 
-                        <p:commandLink id="usuario" onclick="PF('loginUser').show();">
-                            <h:graphicImage library="images" name="registrado.png"/>
-                            <h2 style="text-align: center">Usuario Registrado</h2>
-                        </p:commandLink>
+                                <h:outputLabel for="password" value="Password:" />
+                                <p:password id="password" value="" required="true" label="password" />
 
-                        <p:commandLink id="nuevoUsuario" onclick="PF('registerUser').show();">
-                            <h:graphicImage library="images" name="registrarse.png"/>
-                            <h2 style="text-align: center">Nuevo Usuario</h2>
-                        </p:commandLink>
-                        <p:dialog header="Login de Administrador" widgetVar="loginAdmin" modal="true" height="100">
-                            <h:outputText value="This is a Modal Dialog." />
+                                <f:facet name="footer">
+                                    <p:commandButton value="Login" update="growl" action="#"
+                                                     oncomplete="handleLoginRequest(xhr, status, args)" />
+                                </f:facet>  
+                            </h:panelGrid>                        
                         </p:dialog>
                         <p:dialog header="Login de Empleado" widgetVar="loginEmpleado" modal="true" height="100">
                             <h:outputText value="This is a Modal Dialog." />
                         </p:dialog>
-                        <p:dialog header="Login de Usuario" widgetVar="loginUser" modal="true" height="100">
-                            <h:outputText value="This is a Modal Dialog." />
-                        </p:dialog>
-                        <p:dialog header="Registrarse" widgetVar="registerUser" modal="true" height="100">
-                            <h:outputText value="This is a Modal Dialog." />
-                        </p:dialog>
+
                     </h:panelGrid>
                 </h:form>
             </ui:define>
