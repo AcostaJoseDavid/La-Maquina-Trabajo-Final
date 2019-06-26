@@ -5,10 +5,12 @@
  */
 package aplicacion.hibernate.dao;
 
+import aplicacion.modelo.dominio.Detalle;
+
 /**
  *
  * @author Diego
  */
-public interface IDetalleDAO extends IGenericDAO<Object, Object>{
+public interface IDetalleDAO extends IGenericDAO<Detalle, Integer>{
     
 }

@@ -5,10 +5,14 @@
  */
 package aplicacion.hibernate.dao.imp;
 
+import aplicacion.hibernate.dao.IFacturaDAO;
+import aplicacion.modelo.dominio.Factura;
+import java.io.Serializable;
+
 /**
  *
  * @author Diego
  */
-public class FacturaDAOImp {
+public class FacturaDAOImp extends GenericDAOImp<Factura, Integer>implements Serializable, IFacturaDAO{
     
 }

@@ -11,6 +11,5 @@ import aplicacion.modelo.dominio.Usuario;
  *
  * @author Diego
  */
-public interface IUsuarioDAO { //extends IGenericDAO<Object, Object>
-    void create(Usuario usuario);
+public interface IUsuarioDAO extends IGenericDAO<Usuario, Integer>{
 }

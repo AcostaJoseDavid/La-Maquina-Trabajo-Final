@@ -5,10 +5,14 @@
  */
 package aplicacion.hibernate.dao.imp;
 
+import aplicacion.hibernate.dao.IProductoDAO;
+import aplicacion.modelo.dominio.Producto;
+import java.io.Serializable;
+
 /**
  *
  * @author Diego
  */
-public class ProductoDAOImp {
+public class ProductoDAOImp extends GenericDAOImp<Producto, Integer> implements Serializable, IProductoDAO{
     
 }

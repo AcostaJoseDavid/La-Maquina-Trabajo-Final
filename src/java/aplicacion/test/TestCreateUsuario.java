@@ -18,7 +18,7 @@ public class TestCreateUsuario {
     public static void main(String[] args) {
         Usuario primerUsuario = new Usuario();
         primerUsuario.setApellidoUsuario("Rios");
-        primerUsuario.setContraseñaUsuario("admin");
+        primerUsuario.setContraseñaUsuario("1234");
         primerUsuario.setEstadoUsuario(Boolean.TRUE);
         primerUsuario.setNombreUsuario("Diego");
         primerUsuario.setTipoUsuario(TipoUsuario.ADMIN);

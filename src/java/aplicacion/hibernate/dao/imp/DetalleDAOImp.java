@@ -5,10 +5,13 @@
  */
 package aplicacion.hibernate.dao.imp;
 
+import aplicacion.hibernate.dao.IDetalleDAO;
+import aplicacion.modelo.dominio.Detalle;
+import java.io.Serializable;
+
 /**
  *
  * @author Diego
  */
-public class DetalleDAOImp {
-    
+public class DetalleDAOImp extends GenericDAOImp<Detalle, Integer>implements Serializable, IDetalleDAO{  
 }

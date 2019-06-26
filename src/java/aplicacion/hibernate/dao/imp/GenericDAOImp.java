@@ -5,28 +5,41 @@
  */
 package aplicacion.hibernate.dao.imp;
 
+import aplicacion.hibernate.configuracion.HibernateUtil;
 import aplicacion.hibernate.dao.IGenericDAO;
 import java.io.Serializable;
+import org.hibernate.Session;
 
 /**
  *
  * @author Diego
  */
-public class GenericDAOImp <T, ID extends Serializable> implements IGenericDAO<T, ID>{
+public class GenericDAOImp<T, ID extends Serializable> implements IGenericDAO<T, ID> {
 
     @Override
     public void create(T object) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        session.save(object);
+        session.getTransaction().commit();
+        session.close();
     }
 
     @Override
     public void delete(T object) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        session.update(object);
+        session.getTransaction().commit();
+        session.close();
     }
 
     @Override
     public void update(T object) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        session.update(object);
+        session.getTransaction().commit();
+        session.close();    }
+
 }

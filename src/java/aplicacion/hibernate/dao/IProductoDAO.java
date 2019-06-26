@@ -5,10 +5,12 @@
  */
 package aplicacion.hibernate.dao;
 
+import aplicacion.modelo.dominio.Producto;
+
+
 /**
  *
  * @author Diego
  */
-public interface IProductoDAO extends IGenericDAO<Object, Object>{
-    
+public interface IProductoDAO extends IGenericDAO<Producto, Integer>{
 }

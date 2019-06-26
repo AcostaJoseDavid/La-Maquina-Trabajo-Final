@@ -5,10 +5,12 @@
  */
 package aplicacion.hibernate.dao;
 
+import aplicacion.modelo.dominio.Factura;
+
 /**
  *
  * @author Diego
  */
-public interface IFacturaDAO extends IGenericDAO<Object, Object>{
+public interface IFacturaDAO extends IGenericDAO<Factura, Integer>{
     
 }
