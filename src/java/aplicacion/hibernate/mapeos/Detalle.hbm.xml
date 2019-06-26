@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="aplicacion.modelo.Producto" catalog="trabajofinalmuebleria" table="productos"
+    <class name="aplicacion.modelo.dominio.Producto" catalog="muebleria" table="productos"
            optimistic-lock="version">
         <id name="codigoDetalle" type="integer">
             <column name="det_codigo_detalle"/>
@@ -17,9 +17,5 @@
         <property name="precio" type="double">
             <column name="det_cantidad" length="10" not-null="true"/>
         </property>
-        <!--
-        <one-to-one name="factura" class="aplicacion.modelo.dominio.Factura" fetch="join" cascade="all">
-        </one-to-one>
-        -->
     </class>
 </hibernate-mapping>

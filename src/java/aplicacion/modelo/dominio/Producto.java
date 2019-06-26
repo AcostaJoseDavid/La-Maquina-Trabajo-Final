@@ -19,14 +19,19 @@ public class Producto {
     public Producto() {
     }
 
-    public Producto(boolean estadoProducto, Integer codigoProducto, String nombreProducto, Integer stock, double precioProducto) {
+    public Producto(boolean estadoProducto, String nombreProducto, Integer stock, double precioProducto) {
         this.estadoProducto = estadoProducto;
-        this.codigoProducto = codigoProducto;
         this.nombreProducto = nombreProducto;
         this.stock = stock;
         this.precioProducto = precioProducto;
     }
 
+    public Producto(String nombreProducto, double precioProducto) {
+        this.nombreProducto = nombreProducto;
+        this.precioProducto = precioProducto;
+    }
+
+    
     /**
      * @return the codigoProducto
      */

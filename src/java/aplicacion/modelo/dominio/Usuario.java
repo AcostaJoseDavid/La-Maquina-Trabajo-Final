@@ -28,6 +28,13 @@ public class Usuario {
         this.contraseñaUsuario = contraseñaUsuario;
         this.tipoUsuario = tipoUsuario;
     }
+
+    public Usuario(String apellidoUsuario, String tipoUsuario) {
+        this.apellidoUsuario = apellidoUsuario;
+        this.tipoUsuario = tipoUsuario;
+    }
+    
+    
     /**
      * @return the legajo
      */
